@@ -27,4 +27,5 @@ export type IconType =
     | "twitter"
     | "facebook"
     | "logo"
+    | "quotation"
     | "none";

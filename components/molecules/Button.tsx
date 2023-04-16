@@ -5,7 +5,7 @@ import Link from "next/link";
 
 interface Props {
   label?: string;
-  type?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "slider";
   disabled?: boolean;
   className?: string;
   onClick?: () => void;
@@ -17,6 +17,7 @@ interface Props {
 export default function Button({
   onClick,
   label = "",
+  type = "primary",
   disabled = false,
   className = "",
   size = "lg",
@@ -24,13 +25,20 @@ export default function Button({
   href = "",
 }: Props) {
   // If size is lg return lg button, else return sm button
-
   if (href === "") {
     return (
       <button
         onClick={onClick}
         disabled={disabled}
         className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center bg-yellow text-white hover:bg-white hover:text-black disabled:bg-gray disabled:border-gray disabled:text-white active:bg-yellow disabled:cursor-not-allowed transition-all duration-200 ease-in-out
+
+            ${
+              type === "primary"
+                ? "bg-yellow text-white hover:bg-white"
+                : type === "secondary"
+                ? "bg-white text-gray hover:text-white hover:bg-yellow"
+                : "bg-transparent text-white hover:bg-transparent hover:text-yellow active:bg-transparent"
+            } 
 
             ${
               size === "lg"
@@ -61,6 +69,15 @@ export default function Button({
       href={href}
       onClick={onClick}
       className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center bg-yellow text-white hover:bg-white hover:text-black disabled:bg-gray disabled:border-gray disabled:text-white active:bg-yellow disabled:cursor-not-allowed transition-all duration-200 ease-in-out
+
+
+            ${
+              type === "primary"
+                ? "bg-yellow text-white hover:bg-white"
+                : type === "secondary"
+                ? "bg-white text-gray hover:text-white hover:bg-yellow"
+                : "bg-transparent text-white hover:bg-transparent hover:text-yellow active:bg-transparent"
+            } 
 
             ${
               size === "lg"
