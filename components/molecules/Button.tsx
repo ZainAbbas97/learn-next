@@ -30,8 +30,7 @@ export default function Button({
       <button
         onClick={onClick}
         disabled={disabled}
-        className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center bg-yellow text-white hover:bg-white hover:text-black disabled:bg-gray disabled:border-gray disabled:text-white active:bg-yellow disabled:cursor-not-allowed transition-all duration-200 ease-in-out
-
+        className={`
             ${
               type === "primary"
                 ? "bg-yellow text-white hover:bg-white"
