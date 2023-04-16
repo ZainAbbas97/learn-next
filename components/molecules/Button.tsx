@@ -30,10 +30,11 @@ export default function Button({
       <button
         onClick={onClick}
         disabled={disabled}
-        className={`
+        className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center disabled:cursor-not-allowed transition-all duration-200 ease-in-out
+
             ${
               type === "primary"
-                ? "bg-yellow text-white hover:bg-white"
+                ? "bg-yellow text-white hover:bg-white hover:text-gray"
                 : type === "secondary"
                 ? "bg-white text-gray hover:text-white hover:bg-yellow"
                 : "bg-transparent text-white hover:bg-transparent hover:text-yellow active:bg-transparent"
@@ -67,12 +68,12 @@ export default function Button({
     <Link
       href={href}
       onClick={onClick}
-      className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center bg-yellow text-white hover:bg-white hover:text-black disabled:bg-gray disabled:border-gray disabled:text-white active:bg-yellow disabled:cursor-not-allowed transition-all duration-200 ease-in-out
+      className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center disabled:cursor-not-allowed transition-all duration-200 ease-in-out
 
 
             ${
               type === "primary"
-                ? "bg-yellow text-white hover:bg-white"
+                ? "bg-yellow text-white hover:bg-white hover:text-gray"
                 : type === "secondary"
                 ? "bg-white text-gray hover:text-white hover:bg-yellow"
                 : "bg-transparent text-white hover:bg-transparent hover:text-yellow active:bg-transparent"
