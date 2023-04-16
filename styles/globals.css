@@ -2,26 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/public/Fonts/PlusJakartaSans-VariableFont_wght.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --yellow: #EF8F12;
+  --gray: #181818;
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.highlighted-text {
+  background: linear-gradient(var(--yellow) 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.3em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.highlighted-text:hover {
+  --p: 100%;
+  --t: 0s;
+  color: #fff;
+}
+
+@layer components {
+  body {
+    /* scrollbar-width: none; */
+    -ms-overflow-style: none;
+    /* @apply scrollbar-none; */
+  }
+
+  .grid-temp{
+    @apply px-28 py-20;
+  }
+  .button-large {
+    @apply bg-yellow text-white w-fit h-fit py-6 px-7 text-body font-semibold leading-[120%] rounded-md flex justify-center items-center;
+  }
+
+  .h1 {
+    @apply text-h1 font-bold leading-[120%];
+  }
+
+  .h2 {
+    @apply text-h2 font-bold leading-[120%];
+  }
+
+  .h3 {
+    @apply text-h3 font-bold leading-[120%];
+  }
+
+  .h4 {
+    @apply text-h4 font-bold leading-[120%];
+  }
+
+  .h5 {
+    @apply text-h5 font-bold leading-[120%];
+  }
+
+  .h5-regular {
+    @apply text-h5 font-normal tracking-[10%] leading-[120%];
+  }
+
+  .h6 {
+    @apply text-h6 font-bold leading-[120%];
+  }
+
+  .h6-ils {
+    letter-spacing: 0.1em;
+    @apply text-h6 font-bold tracking-[16%] leading-[120%];
+  }
+
+  .body-large {
+    @apply text-body-large leading-[130%];
+  }
+
+  .body-medium {
+    @apply text-body-medium leading-[120%];
+  }
+
+  .body-bold {
+    @apply text-body font-bold leading-[120%];
+  }
+
+  .body {
+    @apply text-body leading-[120%];
+  }
+
+  .body-small {
+    @apply text-body-small leading-[120%];
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* on less than 350px, make base font size 14px */
+@media (max-width: 350px) {
+  html {
+    font-size: 14px;
+  }
 }
