@@ -1,14 +1,19 @@
 import React from "react";
 import { Section } from "../Page";
 import Link from "next/link";
+import { IconType } from "@/types/Icon.d";
+import Icon from "@/components/atoms/Icon";
 
 type Props = {
   heading?: any;
-  href: string;
+  specialUseCase?: string;
   footerLinks: {
     content: string;
+    href: string;
+    icon: IconType;
   }[];
 };
+
 
 const Logo = () => {
   return (
@@ -88,26 +93,39 @@ const Logo = () => {
   );
 };
 
-
-const FooterLinks = ({ heading, href, footerLinks: data }: Props) => {
-  if (href === "Logo") {
+const IconLink = () => {};
+const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
+  if (specialUseCase === "logo") {
     return (
       <Section>
-        <Logo/>        
+        <Logo />
         {data.map((linkText, index) => (
-          <p className="mb-2">
+          <p className="mb-2 flex flex-row items-center">
+            {linkText.icon && linkText.icon !== "none" && (
+              <Icon
+                name={linkText.icon}
+                className= "w-5 h-5 mr-2"
+              />
+            )}
             {linkText.content}
           </p>
         ))}
       </Section>
     );
   }
-
+  
   return (
     <Section>
-      <h6 className="body-large  mb-10">{heading}</h6>
+      <h6 className="body-large  mb-8">{heading}</h6>
       {data.map((linkText, index) => (
-        <Link key={index} href={href} className="mb-2 hover:text-yellow">
+        <Link
+          key={index}
+          href={linkText.href}
+          className="mb-2 flex flex-row items-center hover:text-yellow"
+        >
+          {linkText.icon && linkText.icon !== "none" && (
+            <Icon name={linkText.icon} className="w-5 h-5 mr-2" />
+          )}
           {linkText.content}
         </Link>
       ))}

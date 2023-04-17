@@ -23,6 +23,7 @@ export type IconType =
     | "check"
     | "instagram"
     | "linkedin"
+    | "behance"
     | "spotify"
     | "twitter"
     | "facebook"
