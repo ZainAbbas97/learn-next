@@ -4,6 +4,7 @@ import { IconType } from "@/types/Icon.d";
 import Homepage from "@/components/templates/Homepage";
 import Testimonial from "@/components/templates/Testimonial";
 import Services from "@/components/templates/Services";
+import ContactUs from "@/components/templates/ContactUs";
 
 export default function Hero() {
   return (
@@ -61,6 +62,28 @@ export default function Hero() {
           },
         ]}
       />
+
+      <ContactUs
+        title="Book a Free Consultation Today!"
+        subtitle="CONTACT US"
+        items={[ 
+          {
+            icon: "location-pin" as IconType,
+            text: "Europe",
+          },
+
+          {
+            icon: "phone" as IconType,
+            text: "+1 234 567 890",
+          },
+
+          {
+            icon: "email" as IconType,
+            text: "xyz@about.com",
+          },
+        ]}
+      />
+
     </>
   );
 }

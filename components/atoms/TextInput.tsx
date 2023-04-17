@@ -30,7 +30,7 @@ export default function TextInput({
 
       {textArea ? (
         <TextareaAutosize
-          className={`transition-all duration-200 bg-[#1B1B1B] bg-opacity-70 outline-none border-dark-grey rounded-lg px-5 py-4 text-white font-primary focus:text-white focus:border-red border-2`}
+          className={`transition-all duration-200 bg-[#1B1B1B] bg-opacity-70 border border-[#707070] border-solid  outline-none border-dark-grey rounded-lg px-5 py-4 text-white font-primary focus:text-white focus:border-yellow`}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
@@ -39,7 +39,7 @@ export default function TextInput({
         />
       ) : (
         <input
-          className={`transition-all duration-200 bg-[#1B1B1B] bg-opacity-70 outline-none border-dark-grey rounded-lg px-5 py-4 text-white font-primary focus:text-white focus:border-red border-2`}
+          className={`transition-all duration-200 border border-gray-200 border-solid bg-[#1B1B1B] bg-opacity-70 outline-none border-[#707070] rounded-lg px-5 py-4 text-white font-primary focus:text-white focus:border-yellow`}
           type={type}
           placeholder={placeholder}
           value={value}

@@ -62,11 +62,11 @@ export default function Dropdown({
         }}
       >
         <div
-          className={`selectedOption font-primary w-full border-2 rounded-lg p-4
+          className={`selectedOption font-primary w-full border border-gray-500 border-solid rounded-lg p-4
                     outline-none ${
                       isOpen || internalValue
-                        ? "border-red"
-                        : "border-dark-grey"
+                        ? "border-yellow"
+                        : "border-[#707070]"
                     } ${
             disabled ? "bg-gray" : "bg-[#1B1B1B] bg-opacity-70"
           } flex flex-row items-center justify-center cursor-pointer`}
@@ -97,14 +97,14 @@ export default function Dropdown({
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
               style={{ width: containerWidth }}
-              className={`absolute optionsDropDownList border-2 rounded-lg border-gray text-sm mt-2`}
+              className={`absolute optionsDropDownList border-2 rounded-lg border-[#313131] text-sm mt-2`}
             >
               {options.map((option) => (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className={`text-light-grey bg-black hover:text-red px-5 py-4 cursor-pointer rounded-md z-20 flex flex-row items-center justify-between transition-all duration-300`}
+                  className={`text-light-grey bg-gray hover:text-yellow px-5 py-4 cursor-pointer rounded-md z-20 flex flex-row items-center justify-between transition-all duration-300`}
                   key={option}
                   onClick={() => {
                     onChange({

@@ -130,7 +130,7 @@ export default function MirageContactForm({ className, activeTag }: Props) {
 
       <div className="my-3">
         <Dropdown
-          options={["General", "Services", "Media"]}
+          options={["Brand Design", "UI/UX Design", "Social Media & Marketing"]}
           value={formState.option}
           required
           label="Project Type"
