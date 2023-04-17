@@ -93,13 +93,12 @@ const Logo = () => {
   );
 };
 
-const IconLink = () => {};
 const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
   if (specialUseCase === "logo") {
     return (
       <Section>
         <Logo />
-        {data.map((linkText, index) => (
+        {data.map((linkText) => (
           <p className="mb-2 flex flex-row items-center">
             {linkText.icon && linkText.icon !== "none" && (
               <Icon
@@ -117,9 +116,8 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
   return (
     <Section>
       <h6 className="body-large  mb-8">{heading}</h6>
-      {data.map((linkText, index) => (
+      {data.map((linkText) => (
         <Link
-          key={index}
           href={linkText.href}
           className="mb-2 flex flex-row items-center hover:text-yellow"
         >

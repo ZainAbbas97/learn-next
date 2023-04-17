@@ -6,12 +6,14 @@ import Testimonial from "@/components/templates/Testimonial";
 import Services from "@/components/templates/Services";
 import ContactUs from "@/components/templates/ContactUs";
 import Footer from "@/components/templates/Footer";
+// import Projects from "@/components/templates/Projects";
+import Portfolio from "@/components/templates/Portfolio";
 
 export default function Hero() {
   return (
     <>
       <Homepage />
-{/* 
+      <Portfolio />
       <Services
         subtitle="Our Services"
         title="We are a full-service digital agency"
@@ -19,24 +21,24 @@ export default function Hero() {
         points={[
           {
             icon: "",
-            heading: "Web Design",
+            heading: "Brand Design",
             content:
               "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
           },
           {
             icon: "",
-            heading: "Web Design",
+            heading: "UI/UX Design",
             content:
               "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
           },
           {
             icon: "",
-            heading: "Web Design",
+            heading: "Social Media & Marketing",
             content:
               "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
           },
         ]}
-      /> */}
+      />
 
       <Testimonial
         data={[
@@ -84,18 +86,8 @@ export default function Hero() {
           },
         ]}
       />
-      {/* 
-      <Footer
-        data={[
-          {content: "Home"},
-          {content: "Home"},
-          {content: "Home"},
-          {content: "Home"},
-        ]}
-        
-       /> */}
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

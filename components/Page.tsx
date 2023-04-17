@@ -2,6 +2,7 @@ import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
 import React from "react";
 import Navbar from "./molecules/Navbar";
+import Footer from "./templates/Footer";
 
 type SectionProps = {
   children: React.ReactNode;
@@ -77,6 +78,7 @@ export default function Page({
         {children}
 
       </main>
+      <Footer />
     </>
   );
 }
