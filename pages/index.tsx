@@ -5,12 +5,13 @@ import Homepage from "@/components/templates/Homepage";
 import Testimonial from "@/components/templates/Testimonial";
 import Services from "@/components/templates/Services";
 import ContactUs from "@/components/templates/ContactUs";
+import Footer from "@/components/templates/Footer";
 
 export default function Hero() {
   return (
     <>
       <Homepage />
-
+{/* 
       <Services
         subtitle="Our Services"
         title="We are a full-service digital agency"
@@ -35,7 +36,7 @@ export default function Hero() {
               "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
           },
         ]}
-      />
+      /> */}
 
       <Testimonial
         data={[
@@ -66,7 +67,7 @@ export default function Hero() {
       <ContactUs
         title="Book a Free Consultation Today!"
         subtitle="CONTACT US"
-        items={[ 
+        items={[
           {
             icon: "location-pin" as IconType,
             text: "Europe",
@@ -83,7 +84,18 @@ export default function Hero() {
           },
         ]}
       />
+      {/* 
+      <Footer
+        data={[
+          {content: "Home"},
+          {content: "Home"},
+          {content: "Home"},
+          {content: "Home"},
+        ]}
+        
+       /> */}
 
+      <Footer/>
     </>
   );
 }
