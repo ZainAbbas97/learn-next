@@ -1,12 +1,10 @@
 import React from "react";
-import Icon from "@/components/atoms/Icon";
 import { IconType } from "@/types/Icon.d";
 import Homepage from "@/components/templates/Homepage";
 import Testimonial from "@/components/templates/Testimonial";
 import Services from "@/components/templates/Services";
 import ContactUs from "@/components/templates/ContactUs";
 import Footer from "@/components/templates/Footer";
-// import Projects from "@/components/templates/Projects";
 import Portfolio from "@/components/templates/Portfolio";
 
 export default function Hero() {

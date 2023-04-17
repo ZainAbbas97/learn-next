@@ -55,38 +55,43 @@ const Projects = () => {
       <SingleProject
         primary={[
           {
-            title: "Project 1",
-            description: "This is a project",
+            title: "Atoro",
+            description: "Brand Identity | Website Design",
             image: "/Images/Atoro.png",
             type: "primary",
+            // href: "/",
           },
           {
-            title: "Project 2",
-            description: "This is another project",
+            title: "Mirage",
+            description: "Brand Identity | Website Design",
             image: "/Images/Mirage.png",
             type: "primary",
+            // href: "/",
           },
         ]}
       />
       <SingleProject
         primary={[
           {
-            title: "Project 1",
-            description: "This is a project",
+            title: "Threegency",
+            description: "Brand Identity | Website Design",
             image: "/Images/Threegency.png",
             type: "primary",
+            // href: "/",
           },
           {
-            title: "Project 2",
-            description: "This is another project",
+            title: "Creators Furniture",
+            description: "Brand Identity",
             image: "/Images/CreatorF.png",
             type: "primary",
+            // href: "/",
           },
           {
-            title: "Project 3",
-            description: "This is the third project",
+            title: "Phakki",
+            description: "Brand Identity",
             image: "/Images/Phakki.png",
             type: "primary",
+            // href: "https://www.youtube.com/shorts/ja28L9cUKG4",
           },
         ]}
       />
