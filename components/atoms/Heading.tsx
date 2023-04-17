@@ -23,7 +23,7 @@ export default function Heading({
         <SlidingText
           text={subTitle}
           animDuration={3}
-          className={`mb-2 uppercase h6-ils text-red ${subtitleClassName}`}
+          className={`mb-2 uppercase h6-ils text-yellow ${subtitleClassName}`}
         />
       )}
 
