@@ -98,13 +98,10 @@
   }
 }
 
-.Typist .Cursor {
-  font-size: text-h1 ;
-  font-weight: 200;
-  /* Adjust size according to your needs */
-  color: #EF8F12;
-}
 
+.typing-cursor {
+  animation: blink 1s step-start infinite;
+}
 /* on less than 350px, make base font size 14px */
 @media (max-width: 350px) {
   html {

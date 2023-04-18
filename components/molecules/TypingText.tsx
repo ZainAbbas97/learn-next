@@ -11,7 +11,7 @@ interface TypingTextProps {
 
 const TypingText: React.FC<TypingTextProps> = ({
   text,
-  typingSpeed = 200,
+  typingSpeed = 100,
   deletingSpeed = 50,
   delay = 1500,
 }) => {
@@ -54,7 +54,7 @@ const TypingText: React.FC<TypingTextProps> = ({
     <span className="relative h1">
       {currentText}
       <span
-        className={`absolute top-0 right-0 h-full w-1 bg-yellow animate-pulse ${
+        className={`absolute top-0 right-0 h-full w-1 bg-yellow typing-cursor ${
           isDeleting ? "hidden" : ""
         }`}
       ></span>
