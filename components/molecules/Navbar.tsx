@@ -51,7 +51,7 @@ export default function Hero() {
           <Link
             className="hover:text-yellow"
             to="projects"
-            smooth={8}
+            smooth={true}
             duration={900}
           >
             Projects
@@ -60,7 +60,7 @@ export default function Hero() {
         <Link
           className="hover:text-yellow"
           to="services"
-          smooth={8}
+          smooth={true}
           duration={900}
         >
           Services
