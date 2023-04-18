@@ -45,17 +45,22 @@ export default function Homepage() {
           </div>
         </Section>
         <Section className="pt-0">
-          <div
-            style={{ height: "75vh" }}
-            className="relative w-full md:none"
-          >
-            <Image
-              className="object-contain mt-0 pt-0 mx-0"
-              src="/Images/Zain.png"
-              fill
-              alt=""
-            />
-          </div>
+<div
+  style={{
+    height: "75vh",
+    paddingBottom: "calc(75vh * 1.1342)",
+    position: "relative",
+  }}
+  className="relative w-full md:none overflow-hidden"
+>
+  <Image
+    className="object-contain mt-0 pt-0 mx-0 absolute top-0 left-0 h-full w-full"
+    src="/Images/Zain.png"
+    fill
+    alt=""
+  />
+</div>
+
         </Section>
       </main>
     </>
