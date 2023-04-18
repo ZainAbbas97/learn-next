@@ -98,8 +98,8 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
     return (
       <Section>
         <Logo />
-        {data.map((linkText) => (
-          <p className="mb-2 flex flex-row items-center">
+        {data.map((linkText, index) => (
+          <p key={index} className="mb-2 flex flex-row items-center">
             {linkText.icon && linkText.icon !== "none" && (
               <Icon
                 name={linkText.icon}
@@ -116,8 +116,9 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
   return (
     <Section>
       <h6 className="body-large  mb-8">{heading}</h6>
-      {data.map((linkText) => (
+      {data.map((linkText, index) => (
         <Link
+          key={index}
           href={linkText.href}
           className="mb-2 flex flex-row items-center hover:text-yellow"
         >
