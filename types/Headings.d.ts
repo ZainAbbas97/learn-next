@@ -1,6 +1,6 @@
 export type HeadingWContentType = {
     id?: number;
-    heading?: string | null;
+    heading?: HeadingType | null;
     content?: string;
     center?: boolean;
 };

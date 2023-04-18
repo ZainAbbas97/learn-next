@@ -49,7 +49,7 @@ export function ProcessPoint({
 }: ProcessPointProps) {
   return (
     <div
-      className={`bg-gray text=white sticky`}
+      className={`bg-gray text=white`}
       ref={innerRef}
       style={{ height: height !== Infinity ? height + 20 : "100%" }}
     >

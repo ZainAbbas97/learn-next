@@ -26,19 +26,15 @@ const item = {
 type Props = {
   subtitle: string;
   title: string;
-  heading: string;
   content: string;
   points: any[];
-  button: ButtonType;
 };
 
 export default function ProcessPoints({
   subtitle,
   title,
   content,
-  heading,
   points,
-  button,
 }: Props) {
   // check if we're on a mobile device using usehook-ts
   const { width, height } = useWindowSize();
@@ -107,10 +103,6 @@ export default function ProcessPoints({
                 __html: content,
               }}
             />
-          )}
-
-          {button && (
-            <Button href={button.link} label={button.text} size={button.size} />
           )}
         </motion.div>
 

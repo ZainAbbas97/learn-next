@@ -48,7 +48,6 @@ export default function Hero() {
     <nav className="max-w-screen-2xl pt-10 px-[5vw] bg-gray h-fit flex justify-between items-center">
       <Logo />
       <div className="flex w-fit text-white space-x-10">
-        <a>
           <Link
             className="hover:text-yellow"
             to="projects"
@@ -57,7 +56,6 @@ export default function Hero() {
           >
             Projects
           </Link>
-        </a>
 
         <Link
           className="hover:text-yellow"
