@@ -43,7 +43,7 @@ const Logo = () => (
 
 export default function Hero() {
   return (
-    <nav className="max-w-screen-2xl py-10 px-[5vw] bg-gray h-fit flex justify-between items-center">
+    <nav className="max-w-screen-2xl pt-10 px-[5vw] bg-gray h-fit flex justify-between items-center">
       <Logo />
       <div className="flex w-fit text-white space-x-10">
         <Link href="/">Projects</Link>
