@@ -12,7 +12,6 @@ export default function Hero() {
   return (
     <>
       <Homepage />
-      {/* <TypingText /> */}
       <Portfolio />
       <Services
         subtitle="Our Services"

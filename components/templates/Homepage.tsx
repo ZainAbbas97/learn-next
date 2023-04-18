@@ -3,18 +3,10 @@ import Navbar from "@/components/molecules/Navbar";
 import Button from "../molecules/Button";
 import { Section } from "../Page";
 import Image from "next/image";
-import Typist from "react-typist";
+import TypingText from "../molecules/TypingText";
+
 
 export default function Homepage() {
-  const [typing, setTyping] = useState(true);
-
-  const onTypingDone = () => {
-    setTyping(false);
-    setTimeout(() => {
-      setTyping(true);
-    }, 1000);
-  };
-
   return (
     <>
       <nav>
@@ -27,22 +19,7 @@ export default function Homepage() {
             <div className="flex">
               <span className="h1">Hi, </span>
               <span className="h1">&nbsp;</span>
-              {typing ? (
-                <Typist
-                  className="h1"
-                  onTypingDone={onTypingDone}
-                  cursor={{
-                    show: true,
-                    blink: true,
-                    element: "|",
-                    hideWhenDone: false,
-                    hideWhenDoneDelay: 1000,
-                  }}
-                >
-                  <span>I'm Zain Abbas</span>
-                  <Typist.Backspace count={12} delay={1000} />
-                </Typist>
-              ) : null}
+              <TypingText text="I'm Zain Abbas" />
             </div>
             <div className="space-y-5">
               <p className="h5-regular uppercase font-normal text-yellow">
