@@ -1,5 +1,3 @@
-// components/TypingText.tsx
-
 import React, { useState, useEffect } from "react";
 
 interface TypingTextProps {
@@ -7,19 +5,27 @@ interface TypingTextProps {
   typingSpeed?: number;
   deletingSpeed?: number;
   delay?: number;
+  deleteDelay?: number;
 }
 
 const TypingText: React.FC<TypingTextProps> = ({
   text,
-  typingSpeed = 100,
+  typingSpeed = 300,
   deletingSpeed = 50,
-  delay = 1500,
+  delay = 500,
+  deleteDelay = 1000,
 }) => {
   const [currentText, setCurrentText] = useState<string>("");
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [charIndex, setCharIndex] = useState<number>(0);
+  const [wait, setWait] = useState<boolean>(true);
 
   useEffect(() => {
+    if (wait) {
+      setIsDeleting(false);
+      return;
+    }
+
     const timeout = setTimeout(
       () => {
         if (!isDeleting && charIndex < text.length) {
@@ -30,25 +36,36 @@ const TypingText: React.FC<TypingTextProps> = ({
           setCharIndex((prev) => prev - 1);
         }
 
-        if (charIndex === text.length) {
-          setIsDeleting(true);
+        if (charIndex === text.length && !isDeleting) {
           clearTimeout(timeout);
-          setTimeout(() => {
-            setIsDeleting(false);
-          }, delay);
-        } else if (charIndex === 0) {
-          setIsDeleting(false);
+          setTimeout(() => setIsDeleting(true), deleteDelay);
+        } else if (charIndex === 0 && isDeleting) {
           clearTimeout(timeout);
-          setTimeout(() => {
-            setIsDeleting(false);
-          }, delay);
+          setTimeout(() => setIsDeleting(false), delay);
         }
       },
       isDeleting ? deletingSpeed : typingSpeed
     );
 
     return () => clearTimeout(timeout);
-  }, [text, typingSpeed, deletingSpeed, delay, charIndex, isDeleting]);
+  }, [
+    text,
+    typingSpeed,
+    deletingSpeed,
+    delay,
+    deleteDelay,
+    charIndex,
+    isDeleting,
+    wait,
+  ]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setWait(false);
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [delay]);
 
   return (
     <span className="relative h1">

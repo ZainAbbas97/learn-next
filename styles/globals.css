@@ -98,10 +98,21 @@
   }
 }
 
+/* @keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
 
 .typing-cursor {
   animation: blink 1s step-start infinite;
-}
+} */
 /* on less than 350px, make base font size 14px */
 @media (max-width: 350px) {
   html {

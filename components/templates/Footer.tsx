@@ -9,19 +9,7 @@ import { IconType } from "@/types/Icon.d";
 export default function Footer() {
   return (
     <div className="flex flex-row">
-      {/* <FooterLinks
-        href="Logo"
-        footerLinks={[{ content: "© 2023, All Rights Reserved" }]}
-      />
-      <FooterLinks
-        heading="Contact Me"
-        href="/"
-        footerLinks={[
-          { content: "zain4abbas7@gmail.com" },
-          { content: "zainabbas@promirage.com" },
-          { content: "info@promirage.com" },
-        ]}
-      /> */}
+
       <FooterLinks
         specialUseCase="logo"
         footerLinks={[
@@ -38,17 +26,17 @@ export default function Footer() {
         footerLinks={[
           {
             content: "zain4abbas7@gmail.com",
-            href: "https://www.facebook.com/",
+            href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=zain4abbas7@gmail.com&su=Subject&body=Email%20body&tf=1",
             icon: "none",
           },
           {
             content: "zainabbas@promirage.com",
-            href: "https://www.instagram.com/",
+            href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=zainabbas@promirage.com&su=Subject&body=Email%20body&tf=1",
             icon: "none",
           },
           {
             content: "info@promirage.com",
-            href: "https://www.facebook.com/",
+            href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@promirage.com&su=Subject&body=Email%20body&tf=1",
             icon: "none",
           },
         ]}
@@ -60,36 +48,16 @@ export default function Footer() {
         footerLinks={[
           {
             content: "LinkedIn",
-            href: "https://www.facebook.com/",
+            href: "https://www.linkedin.com/in/zain04/",
             icon: "linkedin",
           },
           {
             content: "Behnace",
-            href: "https://www.behnace.com/",
+            href: "https://www.behance.net/agencymirage",
             icon: "behance",
           },
         ]}
       />
-
-      {/* 
-      <FooterLinks
-        heading="Connect with me"
-        specialUseCase="icon"
-        footerLinks={[
-          {
-            content: "zain4abbas7@gmail.com",
-            href: "https://www.facebook.com/"
-            icon: "none",,
-          },
-          {
-            content: "zainabbas@promirage.com",
-            href: "https://www.instagram.com/"
-            icon: "none",,
-          },
-          { content: "info@promirage.com", href: "https://www.facebook.com/" 
-        icon: "none",},
-        ]}
-      /> */}
     </div>
   );
 }

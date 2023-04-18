@@ -22,6 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",
+    "react-scroll": "^1.8.9",
     "react-textarea-autosize": "^8.4.1",
     "react-type-animation": "^3.0.1",
     "react-typewriter-hook": "^1.0.1",

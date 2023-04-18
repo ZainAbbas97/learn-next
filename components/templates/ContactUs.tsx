@@ -17,20 +17,20 @@ type Props = {
 };
 
 export default function ContactUs({
-  title = "Book a Free Consultation Today!",
+  title = "Book a Free Today!",
   subtitle = "CONTACT US",
   items = [
     {
       icon: "location-pin",
-      text: "Europe",
+      text: "Islamabad, Pakistan",
     },
     {
       icon: "phone",
-      text: "+1 234 567 890",
+      text: "+92 317 5099 577",
     },
     {
       icon: "email",
-      text: "info@atoro.co",
+      text: "zain4abbas7@gmail.com",
     },
   ],
   activeTag,

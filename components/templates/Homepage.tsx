@@ -4,10 +4,8 @@ import Button from "../molecules/Button";
 import { Section } from "../Page";
 import Image from "next/image";
 import TypingText from "../molecules/TypingText";
-// Add framer motion
 import { motion } from "framer-motion";
-
-
+import { Link } from "react-scroll";
 
 export default function Homepage() {
   return (
@@ -16,18 +14,18 @@ export default function Homepage() {
         <Navbar />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
-          <Section className="w-1/2 ">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-              className={`flex items-start`}
-            >
+        <Section className="w-1/2 ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className={`flex items-start`}
+          >
             <div className="space-y-10">
               <div className="flex">
-                <span className="h1">Hi, </span>
+                <span className="h1">Hi, I'm </span>
                 <span className="h1">&nbsp;</span>
-                <TypingText text="I'm Zain Abbas" />
+                <TypingText text="Zain Abbas" />
               </div>
 
               <div className="space-y-5">
@@ -44,28 +42,30 @@ export default function Homepage() {
                   decisions in their personal lives and careers.
                 </p>
               </div>
-              <Button
-                label="Lets Get In Touch"
-                type="primary"
-                size="lg"
-                icon="airplane"
-                href="/"
-              />
+              {/* <Link to="contactus" smooth={true} duration={500}> */}
+                <Button
+                  label="Lets Get In Touch"
+                  type="primary"
+                  size="lg"
+                  icon="airplane"
+                  href="/"
+                />
+              {/* </Link> */}
             </div>
           </motion.div>
-          </Section>
-          <div
-            style={{ height: "75vh" }}
-            className="relative w-full md:w-1/2 mt-10"
-          >
-            <Image
-              className="object-contain w-full mt-0 pt-0 mx-auto"
-              src="/Images/HomepageImage.png"
-              fill
-              alt=""
-            />
-          </div>
-        </main>
+        </Section>
+        <div
+          style={{ height: "75vh" }}
+          className="relative w-full md:w-1/2 mt-10"
+        >
+          <Image
+            className="object-contain w-full mt-0 pt-0 mx-auto"
+            src="/Images/HomepageImage.png"
+            fill
+            alt=""
+          />
+        </div>
+      </main>
     </>
   );
 }

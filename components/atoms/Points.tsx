@@ -16,7 +16,7 @@ export function BenefitPoint({ heading, content, index }: BenefitPointProps) {
       whileInView={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className={`border-b border-white py-5 pr-3 sm:pr-6 bg-black`}
+      className={`border-b border-white py-5 pr-3 sm:pr-6 bg-gray`}
     >
       {/* text */}
       <div className="flex items-start w-full mb-5 space-x-3">
@@ -49,7 +49,7 @@ export function ProcessPoint({
 }: ProcessPointProps) {
   return (
     <div
-      className={`bg-gray text=white`}
+      className={`bg-gray text=white sticky`}
       ref={innerRef}
       style={{ height: height !== Infinity ? height + 20 : "100%" }}
     >
@@ -74,29 +74,6 @@ export function ProcessPoint({
         {/* content */}
         <p className="sm:body-large text=white">{content}</p>
       </motion.div>
-    </div>
-  );
-}
-
-type WhyUsPointProps = {
-  heading: string;
-  content: string;
-  index: number;
-};
-
-export function WhyUsPoint({ heading, content, index }: WhyUsPointProps) {
-  const indexNumber = index < 10 ? `0${index}` : index;
-
-  return (
-    <div className={`py-5 pr-3 sm:pr-6 bg-gray text=white`}>
-      {/* text */}
-      <div className="w-full mb-5">
-        <h2 className="h3 text-yellow">{indexNumber}</h2>
-        <h5 className="h5 text-white">{heading}</h5>
-      </div>
-
-      {/* content */}
-      <p className="body text-white">{content}</p>
     </div>
   );
 }

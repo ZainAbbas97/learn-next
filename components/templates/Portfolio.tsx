@@ -56,7 +56,7 @@ const SingleProject = ({ primary: pdata = [] }: singleProjectProps) => {
 
 const Projects = () => {
   return (
-    <div className="bg-gray">
+    <div id="projects" className="bg-gray">
       <SingleProject
         primary={[
           {

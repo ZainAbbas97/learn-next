@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "@/components/molecules/Button";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
+
 
 const Logo = () => (
   <svg
@@ -46,9 +48,33 @@ export default function Hero() {
     <nav className="max-w-screen-2xl pt-10 px-[5vw] bg-gray h-fit flex justify-between items-center">
       <Logo />
       <div className="flex w-fit text-white space-x-10">
-        <Link href="/">Projects</Link>
-        <Link href="/">Services </Link>
-        <Link href="/">Resume </Link>
+        <a>
+          <Link
+            className="hover:text-yellow"
+            to="projects"
+            smooth={8}
+            duration={900}
+          >
+            Projects
+          </Link>
+        </a>
+
+        <Link
+          className="hover:text-yellow"
+          to="services"
+          smooth={8}
+          duration={900}
+        >
+          Services
+        </Link>
+
+        <a
+          className="hover:text-yellow"
+          href="@/public/PDF/Zain Abbas - Design Resume.pdf"
+          download
+        >
+          Resume
+        </a>
       </div>
 
       <Button
@@ -57,7 +83,7 @@ export default function Hero() {
         label="Book A Call"
         className=""
         icon="none"
-        href=""
+        href="https://tidycal.com/zainabbas"
       />
     </nav>
   );
