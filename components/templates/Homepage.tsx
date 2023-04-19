@@ -47,8 +47,8 @@ export default function Homepage() {
         <Section className="pt-0">
           <div
             style={{
-              height: "75vh",
-              paddingBottom: "calc(75vh * 1.1342)",
+              height: "60vh",
+              paddingBottom: "calc(60vh * 1.1342)",
               position: "relative",
             }}
             className="relative w-full md:none overflow-hidden"
