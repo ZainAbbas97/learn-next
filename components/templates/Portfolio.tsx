@@ -64,14 +64,14 @@ const Projects = () => {
             description: "Brand Identity | Website Design",
             image: "/Images/Atoro.png",
             type: "primary",
-            href: "/",
+            href: "https://www.behance.net/gallery/162313635/Atoro-Brand-Identity-Design",
           },
           {
             title: "Mirage",
             description: "Brand Identity | Website Design",
             image: "/Images/Mirage.png",
             type: "primary",
-            href: "/",
+            href: "https://www.behance.net/gallery/151250795/Mirage-Brand-Identity",
           },
         ]}
       />
@@ -82,21 +82,21 @@ const Projects = () => {
             description: "Brand Identity | Website Design",
             image: "/Images/Threegency.png",
             type: "primary",
-            href: "/",
+            href: "https://www.behance.net/gallery/161711301/Threegency-Brand-Identity-Design",
           },
           {
             title: "Creators Furniture",
             description: "Brand Identity",
             image: "/Images/CreatorF.png",
             type: "primary",
-            href: "/",
+            href: "https://www.behance.net/gallery/151250443/Creators-Furnitures-Brand-Identity",
           },
           {
             title: "Phakki",
             description: "Brand Identity",
             image: "/Images/Phakki.png",
             type: "primary",
-            href: "https://www.youtube.com/shorts/ja28L9cUKG4",
+            href: "https://www.behance.net/gallery/153950119/Phakki",
           },
         ]}
       />
