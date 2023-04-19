@@ -6,15 +6,28 @@ import TypingText from "../molecules/TypingText";
 import SlidingText from "../atoms/SlidingText";
 
 export default function Homepage() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsLargeScreen(window.innerWidth >= 1024); // adjust the threshold as needed
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <nav>
         <Navbar />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
-        <Section className="w-fit">
+        <Section className="w-{100vw} lg:w-fit">
           <div className="space-y-10">
-            <div className="flex">
+            <div className="flex flex-wrap">
               <SlidingText
                 text={`Hi, I'm `}
                 animDuration={5}
@@ -30,37 +43,32 @@ export default function Homepage() {
                 className={`h5-regular uppercase font-normal text-yellow`}
               />
               <SlidingText
-                text={`A loud ambivert with an insatiable passion for discussing ideas and pushing boundaries.`}
+                text={`A loud ambivert with a passion for discussing ideas and pushing boundaries.`}
                 animDuration={1}
                 className={`body`}
               />
             </div>
-            {/* <Button
-              label="Lets Get In Touch"
-              type="primary"
-              size="lg"
-              icon="airplane"
-              href="/"
-            /> */}
           </div>
         </Section>
-        <Section className="pt-0">
-          <div
-            style={{
-              height: "60vh",
-              paddingBottom: "calc(60vh * 1.1342)",
-              position: "relative",
-            }}
-            className="relative w-full md:none overflow-hidden"
-          >
-            <Image
-              className="object-contain mt-0 pt-0 mx-0 absolute top-0 left-0 h-full w-full"
-              src="/Images/Zain.png"
-              fill
-              alt=""
-            />
-          </div>
-        </Section>
+        {/* Conditionally render this component for lg screens and above */}
+        {isLargeScreen && (
+          <Section className="pt-0">
+            <div
+              style={{
+                height: "60vh",
+                position: "relative",
+              }}
+              className="hidden relative lg:w-full lg:block overflow-hidden"
+            >
+              <Image
+                className="object-contain mt-0 pt-0 mx-0 absolute top-0 left-0 h-full w-full"
+                src="/Images/Zain.png"
+                fill
+                alt=""
+              />
+            </div>
+          </Section>
+        )}
       </main>
     </>
   );

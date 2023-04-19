@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import router from "next/router";
-import Heading from "@/components/atoms/Heading";
 
 type singleProjectProps = {
   primary?: {
@@ -22,11 +20,11 @@ const SingleProject = ({ primary: pdata = [] }: singleProjectProps) => {
 
   return (
 
-    <div style={{ height: "75vh" }} className="flex my-0">
+    <div style={{ height: "50vh" }} className="flex my-0">
       {pdata.map((data, index) => (
         <button
           key={index}
-          onClick={() => router.push(data.href)}
+          onClick={() => window.open(data.href, "_blank")}
           className="relative w-1/2 h-full aspect-w-2 aspect-h-1 overflow-hidden"
         >
           <motion.div initial="initial" whileHover="hover">

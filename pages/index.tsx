@@ -81,18 +81,16 @@ export default function Hero() {
           subtitle="CONTACT US"
           items={[
             {
-              icon: "location-pin" as IconType,
-              text: "Europe",
+              icon: "location-pin",
+              text: "Islamabad, Pakistan",
             },
-
             {
-              icon: "phone" as IconType,
-              text: "+1 234 567 890",
+              icon: "phone",
+              text: "+92 317 5099 577",
             },
-
             {
-              icon: "email" as IconType,
-              text: "xyz@about.com",
+              icon: "email",
+              text: "zain4abbas7@gmail.com",
             },
           ]}
         />
