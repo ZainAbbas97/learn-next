@@ -12,8 +12,8 @@ export default function Homepage() {
         <Navbar />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
-        <Section className="">
-          <div className="space-y-10 w-{50vw}">
+        <Section className="w-fit">
+          <div className="space-y-10">
             <div className="flex">
               <SlidingText
                 text={`Hi, I'm `}
@@ -23,7 +23,7 @@ export default function Homepage() {
               <TypingText text="Zain Abbas" />
             </div>
 
-            <div className="space-y-5 w-fill">
+            <div className="space-y-5 ">
               <SlidingText
                 text={`Brand Designer | UI & UX Designer`}
                 animDuration={5}
@@ -44,14 +44,14 @@ export default function Homepage() {
             /> */}
           </div>
         </Section>
-        <Section className="pt-0 pl-0 pr-0 ml-0 mr-0">
+        <Section className="pt-0">
           <div
             style={{
               height: "60vh",
               paddingBottom: "calc(60vh * 1.1342)",
               position: "relative",
             }}
-            className="relative w-1/2 md:none overflow-hidden"
+            className="relative w-full md:none overflow-hidden"
           >
             <Image
               className="object-contain mt-0 pt-0 mx-0 absolute top-0 left-0 h-full w-full"
