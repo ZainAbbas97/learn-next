@@ -29,7 +29,7 @@ export default function Hero() {
 
         <a
           className="hover:text-yellow"
-          href="@/public/PDF/Zain Abbas - Design Resume.pdf"
+          href="/PDF/Zain Abbas - Design Resume.pdf"
           download
         >
           Resume

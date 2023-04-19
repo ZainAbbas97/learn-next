@@ -24,27 +24,27 @@ export default function Hero() {
       </div>
       <div id="services">
         <Services
-          subtitle="Our Services"
-          title="We are a full-service digital agency"
-          content="We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online."
+          subtitle="My Services"
+          title="Services Tailored to Boost Your Brand"
+          content="From captivating brand design to engaging social media strategies, experience the personalized support and expertise you need to thrive. Let me be your catalyst for growth and transformation in the competitive digital landscape."
           points={[
             {
               icon: "",
               heading: "Brand Design",
               content:
-                "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
+                "Embrace a captivating identity that engages your audience and leaves a lasting impression. Elevate your game, make your mark, and outshine the competition. Get ready to shine!",
             },
             {
               icon: "",
               heading: "UI/UX Design",
               content:
-                "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
+                "Discover seamless, user-centric designs that elevate your experience, blending intuitive navigation and stunning visuals to create memorable digital journeys.",
             },
             {
               icon: "",
               heading: "Social Media & Marketing",
               content:
-                "We are a full-service digital agency that offers a wide range of services to help you grow your business online. We are a full-service digital agency that offers a wide range of services to help you grow your business online.",
+                "Amplify your brand's reach with dynamic social media and marketing strategies, engaging audiences and driving success in the digital landscape.",
             },
           ]}
         />
