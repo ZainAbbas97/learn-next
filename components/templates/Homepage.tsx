@@ -44,7 +44,7 @@ export default function Homepage() {
             /> */}
           </div>
         </Section>
-        <Section className="pt-0">
+        <Section className="pt-0 pl-0 pr-0 ml-0 mr-0">
           <div
             style={{
               height: "60vh",
