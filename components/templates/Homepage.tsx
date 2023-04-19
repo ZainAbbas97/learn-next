@@ -12,8 +12,8 @@ export default function Homepage() {
         <Navbar />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
-        <Section className="w-fit">
-          <div className="space-y-10">
+        <Section className="">
+          <div className="space-y-10 w-{50vw}">
             <div className="flex">
               <SlidingText
                 text={`Hi, I'm `}
@@ -23,14 +23,14 @@ export default function Homepage() {
               <TypingText text="Zain Abbas" />
             </div>
 
-            <div className="space-y-5 w-10/12">
+            <div className="space-y-5 w-fill">
               <SlidingText
                 text={`Brand Designer | UI & UX Designer`}
                 animDuration={5}
                 className={`h5-regular uppercase font-normal text-yellow`}
               />
               <SlidingText
-                text={`I am a passionate individual whose goal is to provide more employment opportunities to the people of Pakistan as well as educate them about technology and design.`}
+                text={`A loud ambivert with an insatiable passion for discussing ideas and pushing boundaries.`}
                 animDuration={1}
                 className={`body`}
               />
@@ -51,7 +51,7 @@ export default function Homepage() {
               paddingBottom: "calc(60vh * 1.1342)",
               position: "relative",
             }}
-            className="relative w-full md:none overflow-hidden"
+            className="relative w-1/2 md:none overflow-hidden"
           >
             <Image
               className="object-contain mt-0 pt-0 mx-0 absolute top-0 left-0 h-full w-full"
