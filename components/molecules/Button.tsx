@@ -68,7 +68,7 @@ export default function Button({
     <Link
       href={href}
       onClick={onClick}
-      className={`w-fit font-primary body font-medium flex justify-center items-center cursor-pointer rounded-lg capitalize text-center disabled:cursor-not-allowed transition-all duration-200 ease-in-out
+      className={`w-fit font-primary h6 flex justify-center items-center cursor-pointer rounded-lg capitalize text-center disabled:cursor-not-allowed transition-all duration-200 ease-in-out
 
 
             ${

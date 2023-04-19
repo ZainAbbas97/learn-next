@@ -44,5 +44,4 @@ const Logo = ({ className, href = "/" }: Props) => (
   </a>
 );
 
-
 export default Logo;

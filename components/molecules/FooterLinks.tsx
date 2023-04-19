@@ -14,7 +14,6 @@ type Props = {
   }[];
 };
 
-
 const Logo = () => {
   return (
     <svg
@@ -101,10 +100,7 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
         {data.map((linkText, index) => (
           <p key={index} className="mb-2 flex flex-row items-center">
             {linkText.icon && linkText.icon !== "none" && (
-              <Icon
-                name={linkText.icon}
-                className= "w-5 h-5 mr-2"
-              />
+              <Icon name={linkText.icon} className="w-5 h-5 mr-2" />
             )}
             {linkText.content}
           </p>
@@ -112,7 +108,7 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
       </Section>
     );
   }
-  
+
   return (
     <Section>
       <h6 className="body-large  mb-8">{heading}</h6>
