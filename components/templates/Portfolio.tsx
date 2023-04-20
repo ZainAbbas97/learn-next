@@ -20,7 +20,7 @@ const SingleProject = ({ primary: pdata = [] }: singleProjectProps) => {
 
   return (
 
-    <div style={{ height: "50vh" }} className="flex my-0">
+    <div style={{ height: "65vh" }} className="flex my-0">
       {pdata.map((data, index) => (
         <button
           key={index}

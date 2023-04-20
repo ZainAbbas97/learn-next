@@ -4,6 +4,7 @@ import { Section } from "../Page";
 import Image from "next/image";
 import TypingText from "../molecules/TypingText";
 import SlidingText from "../atoms/SlidingText";
+import Nav2 from "@/components/molecules/Nav2";
 
 export default function Homepage() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -22,10 +23,10 @@ export default function Homepage() {
   return (
     <>
       <nav>
-        <Navbar />
+        <Nav2 />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
-        <Section className="w-{100vw} lg:w-fit">
+        <Section className="w-{100vw} lg:w-full">
           <div className="space-y-10">
             <div className="flex flex-wrap">
               <SlidingText
