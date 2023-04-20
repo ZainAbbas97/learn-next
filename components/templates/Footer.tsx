@@ -1,26 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Section } from "../Page";
-import Link from "next/link";
 import FooterLinks from "@/components/molecules/FooterLinks";
-import { IconType } from "@/types/Icon.d";
 
 export default function Footer() {
-  // const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setIsLargeScreen(window.innerWidth >= 1024); // adjust the threshold as needed
-  //   }
-
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
   return (
-    <>
-      {/* {isLargeScreen && ( */}
-        <div className="flex flex-row bg-gray">
+    <div className="flex flex-col md:flex-row bg-gray text-white ">
           <FooterLinks
             specialUseCase="logo"
             footerLinks={[
@@ -69,8 +52,6 @@ export default function Footer() {
               },
             ]}
           />
-        </div>
-      {/* // )} */}
-    </>
+    </div>
   );
 }

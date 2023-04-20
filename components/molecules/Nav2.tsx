@@ -79,14 +79,24 @@ export default function Nav2() {
     </motion.div>
   );
 
-  const HamburgerMenu = ({ setIsOpen, isOpen }) => (
+  interface HamburgerMenuProps {
+    setIsOpen: (isOpen: boolean) => void;
+    isOpen: boolean;
+  }
+
+  const HamburgerMenu = ({ setIsOpen, isOpen }: HamburgerMenuProps) => (
     <motion.div
-      className={`fixed top-0 left-0 w-full h-screen bg-yellow-700 bg-opacity-75 flex flex-col items-center text-white space-y-5 pt-10 ${
+      className={`fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center text-white space-y-5 h4 font-normal transition-colors duration-200 cursor-pointer active:text-yellow body lg:w-full lg:text-left lg:border-none bg-gray bg-opacity-100 py-2.5 md:py-0 ${
         isOpen ? "block" : "hidden"
       }`}
     >
-      <div onClick={() => setIsOpen(!isOpen)}>
-    <Icon height={25} width={25} className="text-white" name="cross" />
+      <div onClick={() => setIsOpen(!isOpen)} className="">
+        <Icon
+          height={40}
+          width={40}
+          className="text-white cursor-pointer hover:text-yellow"
+          name="cross"
+        />
       </div>
       <Link
         className="hover:text-yellow"
@@ -112,7 +122,7 @@ export default function Nav2() {
         Resume
       </a>
       <Button
-        size="sm"
+        size="lg"
         type="primary"
         label="Book A Call"
         className="text-white"
@@ -123,14 +133,9 @@ export default function Nav2() {
   );
 
   return (
-    <Section>
+    <>
       <nav className="w-full pt-10 px-[5vw] bg-gray h-fit flex justify-between items-center">
-        <Logo 
-            className={`${
-        isOpen ? "hidden" : "block"
-      }`}
-        
-        />
+        <Logo className={`${isOpen ? "hidden" : "block"}`} />
         {showIcon && <HamburgerIcon className="ml-auto" />}
         {(width >= 640 || !showIcon) && (
           <>
@@ -147,6 +152,6 @@ export default function Nav2() {
         )}
       </nav>
       <HamburgerMenu setIsOpen={setIsOpen} isOpen={isOpen} />
-    </Section>
+    </>
   );
 }

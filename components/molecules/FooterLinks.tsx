@@ -95,7 +95,7 @@ const Logo = () => {
 const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
   if (specialUseCase === "logo") {
     return (
-      <Section>
+      <Section className="py-10">
         <Logo />
         {data.map((linkText, index) => (
           <p key={index} className="mb-2 flex flex-row items-center">
