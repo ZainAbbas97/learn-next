@@ -73,7 +73,7 @@ export default function ProcessPoints({
   const longestPointHeight = Math.max(...pointHeights);
 
   return (
-    <Section>
+    <Section className="pt-0 mt-0">
       <div className={`flex flex-wrap md:flex-nowrap md:gap-16`}>
         <motion.div
           className={`w-full flex flex-col h-full gap-y-8 sticky top-24 lg:top-64 `}

@@ -13,7 +13,7 @@ export default function Hero() {
     <>
     {/* <ScrambledText /> */}
       <Homepage />
-      <div id="projects">
+      <div id="projects" className="overflow-hidden">
         <Portfolio />
       </div>
       <div id="services">
