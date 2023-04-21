@@ -95,7 +95,7 @@ const Logo = () => {
 const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
   if (specialUseCase === "logo") {
     return (
-      <Section className="py-10">
+      <div className="pb-10">
         <Logo />
         {data.map((linkText, index) => (
           <p key={index} className="mb-2 flex flex-row items-center">
@@ -105,12 +105,12 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
             {linkText.content}
           </p>
         ))}
-      </Section>
+      </div>
     );
   }
 
   return (
-    <Section>
+    <div className="py-10">
       <h6 className="body-large  mb-8">{heading}</h6>
       {data.map((linkText, index) => (
         <Link
@@ -124,7 +124,7 @@ const FooterLinks = ({ heading, specialUseCase, footerLinks: data }: Props) => {
           {linkText.content}
         </Link>
       ))}
-    </Section>
+    </div>
   );
 };
 
