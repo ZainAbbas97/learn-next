@@ -1,7 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
 import React from "react";
-import Navbar from "./molecules/Navbar";
 import Footer from "./templates/Footer";
 
 type SectionProps = {
@@ -74,11 +73,8 @@ export default function Page({
           <link rel="icon" href="/favicon.svg" />
         </Head>
 
-        <Navbar />
         {children}
-
       </main>
-      <Footer />
     </>
   );
 }

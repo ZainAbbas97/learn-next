@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 import Button from "../molecules/Button";
 import Icon from "../atoms/Icon";
-import { Section } from "../Page";
 import { Link } from "react-scroll";
 import Logo from "@/components/atoms/Logo";
 

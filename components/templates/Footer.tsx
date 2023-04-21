@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import FooterLinks from "@/components/molecules/FooterLinks";
+import { Section } from "../Page";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col md:flex-row bg-gray text-white ">
+    <Section className="flex flex-col py-0 md:flex-row bg-gray text-white ">
           <FooterLinks
             specialUseCase="logo"
             footerLinks={[
@@ -52,6 +53,6 @@ export default function Footer() {
               },
             ]}
           />
-    </div>
+    </Section>
   );
 }
