@@ -6,11 +6,12 @@ import Services from "@/components/templates/Services";
 import ContactUs from "@/components/templates/ContactUs";
 import Footer from "@/components/templates/Footer";
 import Portfolio from "@/components/templates/Portfolio";
+import ScrambledText from "@/components/templates/ScrambledText";
 
 export default function Hero() {
-
   return (
     <>
+    <ScrambledText />
       <Homepage />
       <div id="projects">
         <Portfolio />

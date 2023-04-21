@@ -72,7 +72,7 @@ export default function MirageContactForm({ className, activeTag }: Props) {
         e.preventDefault();
         setIsLoading(true);
         fetch(
-          "https://us-central1-atoro-api.cloudfunctions.net/api/atoro-contact",
+          // "https://us-central1-atoro-api.cloudfunctions.net/api/atoro-contact",
           // "http://127.0.0.1:5001/atoro-api/us-central1/api/atoro-contact",
           {
             method: "POST",
