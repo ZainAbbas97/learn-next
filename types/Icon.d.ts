@@ -29,4 +29,10 @@ export type IconType =
     | "facebook"
     | "logo"
     | "quotation"
+    | "Atoro"
+    | "Mirage"
+    | "Threegency"
+    | "Phakki"
+    | "Creators"
+    | "ViewMore"
     | "none";

@@ -49,7 +49,7 @@ export default function Hero() {
           ]}
         />
       </div>
-
+{/* 
       <Testimonial
         data={[
           {
@@ -74,7 +74,7 @@ export default function Hero() {
             profileDesignation: "Lead Designer at Atoro",
           },
         ]}
-      />
+      /> */}
       <div id="contactus">
         <ContactUs
           title="Book a Free Consultation Today!"
