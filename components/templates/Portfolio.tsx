@@ -37,7 +37,7 @@ type singleProjectProps = {
 
   return (
     <div
-      className={`grid grid-cols-2 sm:grid-cols-3 auto-rows-[50vh] my-0 ${className}`}
+      className={`grid grid-cols-2 sm:grid-cols-3 md:auto-rows-[50vh] auto-rows-[33vh]  my-0 ${className}`}
     >
       {pdata.map((data, index) => (
         <button

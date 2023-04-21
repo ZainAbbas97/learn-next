@@ -6,15 +6,8 @@ import Services from "@/components/templates/Services";
 import ContactUs from "@/components/templates/ContactUs";
 import Footer from "@/components/templates/Footer";
 import Portfolio from "@/components/templates/Portfolio";
-import TypingText from "@/components/molecules/TypingText";
 
 export default function Hero() {
-  const scrollToProjects = () => {
-    const projectsElement = document.getElementById("projects");
-    if (projectsElement) {
-      projectsElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <>
