@@ -4,7 +4,6 @@ import { Section } from "../Page";
 import Image from "next/image";
 import TypingText from "../molecules/TypingText";
 import SlidingText from "../atoms/SlidingText";
-import Nav2 from "@/components/molecules/Nav2";
 
 export default function Homepage() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -21,9 +20,9 @@ export default function Homepage() {
   }, []);
 
   return (
-    <>
+    <div className="bg-gray">
       <nav>
-        <Nav2 />
+        <Navbar />
       </nav>
       <main className="flex pt-0 justify-between h-screen items-center bg-gray text-white">
         <Section className="w-{100vw} lg:w-full">
@@ -51,7 +50,7 @@ export default function Homepage() {
             </div>
           </div>
         </Section>
-        {/* Conditionally render this component for lg screens and above */}
+
         {isLargeScreen && (
           <Section className="pt-0">
             <div
@@ -71,6 +70,6 @@ export default function Homepage() {
           </Section>
         )}
       </main>
-    </>
+    </div>
   );
 }

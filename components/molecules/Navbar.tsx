@@ -7,13 +7,19 @@ import { Section } from "../Page";
 import { Link } from "react-scroll";
 import Logo from "@/components/atoms/Logo";
 
-const NavMenu = () => (
+type NavMenuProps = {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const NavMenu = ({ setIsOpen } :NavMenuProps) => (
+  // Add other props as necessary
   <div className="flex w-fit text-white space-x-10 sm:block">
     <Link
       className="hover:text-yellow"
       to="projects"
       smooth={true}
       duration={900}
+      onClick={() => setIsOpen(false)} // Add this line
     >
       Projects
     </Link>
@@ -22,6 +28,7 @@ const NavMenu = () => (
       to="services"
       smooth={true}
       duration={900}
+      onClick={() => setIsOpen(false)} // Add this line
     >
       Services
     </Link>
@@ -38,7 +45,7 @@ const NavMenu = () => (
 export default function Nav2() {
   const { width } = useWindowSize();
   const { height } = useWindowSize();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Change this line
   const [showIcon, setShowIcon] = useState(false);
 
   useEffect(() => {
@@ -61,7 +68,7 @@ export default function Nav2() {
     <motion.div
       layout
       onClick={() => setIsOpen(!isOpen)}
-      className={`flex text-white transition-colors duration-200 cursor-pointer select-none h-full body ${className} ${
+      className={`flex text-white transition-colors duration-200 cursor-pointer select-none h-full h6 font-normal ${className} ${
         isOpen ? "hidden" : "block"
       }`}
     >
@@ -73,7 +80,7 @@ export default function Nav2() {
       ) : (
         <motion.div layout layoutId="ham" className="flex items-center">
           Menu
-          <Icon className="ml-2" name="hamburger" />
+          <Icon width={30} height={30} className="ml-2" name="hamburger" />
         </motion.div>
       )}
     </motion.div>
@@ -86,19 +93,20 @@ export default function Nav2() {
 
   const HamburgerMenu = ({ setIsOpen, isOpen }: HamburgerMenuProps) => (
     <motion.div
-      className={`z-10  fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center text-white space-y-5 h4 font-normal transition-colors duration-200 cursor-pointer hover:text-yellow active:text-yellow body lg:w-full lg:text-left lg:border-none bg-yellow bg-opacity-100 py-2.5 md:py-0 ${
+      className={`z-10  fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center text-white space-y-5 h4 transition-colors duration-200 cursor-pointer backdrop-blur-lg hover:text-yellow active:text-yellow lg:w-full lg:text-left lg:border-none bg-gray bg-opacity-75 py-2.5 md:py-0 ${
         isOpen ? "block" : "hidden"
       }`}
     >
       <div onClick={() => setIsOpen(!isOpen)} className="">
         <Icon
-          height={40}
-          width={40}
+          height={60}
+          width={60}
           className="text-white cursor-pointer hover:text-yellow"
           name="cross"
         />
       </div>
       <Link
+        onClick={() => setIsOpen(!isOpen)}
         className="hover:text-yellow"
         to="projects"
         smooth={true}
@@ -107,6 +115,7 @@ export default function Nav2() {
         Projects
       </Link>
       <Link
+        onClick={() => setIsOpen(!isOpen)}
         className="hover:text-yellow"
         to="services"
         smooth={true}
@@ -115,6 +124,7 @@ export default function Nav2() {
         Services
       </Link>
       <a
+        onClick={() => setIsOpen(!isOpen)}
         className="hover:text-yellow"
         href="/PDF/Zain Abbas - Design Resume.pdf"
         download
@@ -122,6 +132,7 @@ export default function Nav2() {
         Resume
       </a>
       <Button
+        onClick={() => setIsOpen(!isOpen)}
         size="lg"
         type="primary"
         label="Book A Call"
@@ -139,7 +150,7 @@ export default function Nav2() {
         {showIcon && <HamburgerIcon className="ml-auto" />}
         {(width >= 640 || !showIcon) && (
           <>
-            <NavMenu />
+            <NavMenu setIsOpen={setIsOpen} /> {/* Add this prop */}
             <Button
               size="sm"
               type="primary"
