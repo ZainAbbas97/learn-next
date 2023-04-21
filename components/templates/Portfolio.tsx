@@ -37,13 +37,13 @@ const SingleProject = ({
 
   return (
     <div
-      className={`grid grid-cols-2 md:grid-cols-3  grid-row-3 md:grid-rows-2 h-[150vh] my-0 ${className}`}
+      className={`grid grid-cols-2 sm:grid-cols-3 md:auto-rows-[50vh] auto-rows-[33vh]  my-0 ${className}`}
     >
       {pdata.map((data, index) => (
         <button
           key={index}
           onClick={() => window.open(data.href, "_blank")}
-          className={`relative w-full h-full max-h-[50vh] aspect-w-2 aspect-h-1 overflow-hidden ${data.className}`}
+          className={`relative w-full h-full aspect-w-2 aspect-h-1 overflow-hidden ${data.className}`}
         >
           <motion.div initial="initial" whileHover="hover">
             <div className="object-cover w-full h-full flex justify-center items-center">
