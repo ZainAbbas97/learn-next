@@ -75,12 +75,12 @@ export default function Nav2() {
       {isOpen ? (
         <motion.div layout layoutId="ham" className="flex items-center">
           Close
-          <Icon className="ml-2" name="cross" />
+          <Icon className="ml-3" name="cross" />
         </motion.div>
       ) : (
         <motion.div layout layoutId="ham" className="flex items-center">
           Menu
-          <Icon width={30} height={30} className="ml-2" name="hamburger" />
+          <Icon width={25} height={25} className="ml-3" name="hamburger" />
         </motion.div>
       )}
     </motion.div>
@@ -93,7 +93,7 @@ export default function Nav2() {
 
   const HamburgerMenu = ({ setIsOpen, isOpen }: HamburgerMenuProps) => (
     <motion.div
-      className={`z-10  fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center text-white space-y-5 h4 transition-colors duration-200 cursor-pointer backdrop-blur-lg hover:text-yellow active:text-yellow lg:w-full lg:text-left lg:border-none bg-gray bg-opacity-75 py-2.5 md:py-0 ${
+      className={`z-10  fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center text-white space-y-5 h4 font-semibold transition-colors duration-200 cursor-pointer backdrop-blur-lg hover:text-yellow active:text-yellow lg:w-full lg:text-left lg:border-none bg-gray bg-opacity-75 py-2.5 md:py-0 ${
         isOpen ? "block" : "hidden"
       }`}
     >
