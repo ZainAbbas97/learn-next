@@ -3,7 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { IconType } from "@/types/Icon.d";
 import Icon from "@/components/atoms/Icon";
-
 type singleProjectProps = {
   className?: string;
   primary?: {
@@ -16,7 +15,8 @@ type singleProjectProps = {
     width?: number;
     height?: number;
   }[];
-};const SingleProject = ({
+};
+const SingleProject = ({
   primary: pdata = [],
   className = "",
 }: singleProjectProps) => {
@@ -37,7 +37,7 @@ type singleProjectProps = {
 
   return (
     <div
-      className={`grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-4 md:auto-rows-[50vh] auto-rows-[35vh]  my-0 ${className}`}
+      className={`grid grid-cols-2 md:grid-cols-3 auto-rows-[50vh] my-0 ${className}`}
     >
       {pdata.map((data, index) => (
         <button
@@ -78,7 +78,6 @@ type singleProjectProps = {
     </div>
   );
 };
-
 
 const Projects = () => {
   return (

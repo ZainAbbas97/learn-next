@@ -11,7 +11,7 @@ import ScrambledText from "@/components/templates/ScrambledText";
 export default function Hero() {
   return (
     <>
-    <ScrambledText />
+    {/* <ScrambledText /> */}
       <Homepage />
       <div id="projects">
         <Portfolio />
