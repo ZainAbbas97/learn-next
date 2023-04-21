@@ -46,18 +46,17 @@ export default function Nav2() {
   const { height } = useWindowSize();
   const [isOpen, setIsOpen] = useState(false); // Change this line
   const [showIcon, setShowIcon] = useState(false);
-
-  useEffect(() => {
-    if (width > 0) {
-      if (width >= 640) {
-        setIsOpen(false);
-        setShowIcon(false);
-      } else {
-        setShowIcon(true);
-        setIsOpen(true);
-      }
+useEffect(() => {
+  if (width > 0) {
+    if (width >= 640) {
+      setIsOpen(false);
+      setShowIcon(false);
+    } else {
+      setShowIcon(true);
     }
-  }, [width, height]);
+  }
+}, [width, height]);
+
 
   type Props = {
     className?: string;
