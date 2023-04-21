@@ -37,16 +37,16 @@ const SingleProject = ({
 
   return (
     <div
-      className={`grid grid-cols-2 sm:grid-cols-3 md:auto-rows-[50vh] auto-rows-[33vh]  my-0 ${className}`}
+      className={`grid w-full grid-cols-2 sm:grid-cols-3 md:auto-rows-[50vh] auto-rows-[33vh] my-0 ${className}`}
     >
       {pdata.map((data, index) => (
         <button
           key={index}
           onClick={() => window.open(data.href, "_blank")}
-          className={`relative w-full h-full aspect-w-2 aspect-h-1 overflow-hidden ${data.className}`}
+          className={`relative w-full h-full aspect-w-2 aspect-h-1 overflow-hidden transition-all ${data.className}`}
         >
           <motion.div initial="initial" whileHover="hover">
-            <div className="object-cover w-full h-full flex justify-center items-center">
+            <div className="flex items-center justify-center object-cover w-full h-full">
               <Icon
                 name={data.image || "none"}
                 width={data.width || 60}
@@ -62,10 +62,10 @@ const SingleProject = ({
                   style={{ backdropFilter: "blur(0px)", opacity: 0.5 }}
                 ></motion.div>
                 <motion.div
-                  className="absolute inset-0 flex flex-col justify-center items-center"
+                  className="absolute inset-0 flex flex-col items-center justify-center"
                   variants={hoverVariants}
                 >
-                  <h2 className="text-white h5 font-normal mb-2">
+                  <h2 className="mb-2 font-normal text-white h5">
                     {data.title}
                   </h2>
                   <p className="text-white body">{data.description}</p>
@@ -81,7 +81,7 @@ const SingleProject = ({
 
 const Projects = () => {
   return (
-    <div id="projects" className="bg-gray max-w-screen-2xl w-full pb-0">
+    <div id="projects" className="w-full pb-0 bg-gray">
       <SingleProject
         primary={[
           {
